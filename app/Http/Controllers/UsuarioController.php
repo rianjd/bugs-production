@@ -36,7 +36,7 @@ class UsuarioController extends Controller
 
         }
         else{
-            return back();
+            return back()->with('errors','Erro');
         }
     }
      /** Função para logout */

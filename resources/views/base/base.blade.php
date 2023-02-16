@@ -18,8 +18,15 @@
     <link rel="stylesheet"
         href="{{ URL::asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    {{-- SCRIPT --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    </script>
 
 </head>
 
@@ -118,9 +125,19 @@
                                                         {{ count(session('cart')) }}
                                                     @endif
                                                 </span></li>
-                                            <li><a class="icon icon-sm fa fa-cog cinza dropdown-toggle" role="button"
-                                                    id="dropdownMenuLink" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"></a></li>
+                                            <li class="row">
+                                                <div class="dropdown">
+                                                    <a class="icon icon-sm fa fa-cog cinza dropdown-toggle"
+                                                        type="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"></a>
+                                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                                        <li>
+                                                            <a class="dropdown-item disabled" href="/perfil">Ver perfil</a>
+                                                            <a class="dropdown-item" href="/logout">Sair</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
                                         @else
                                             <li><a class="icon icon-sm fa fa-user cinza" data-bs-toggle="modal"
                                                     data-bs-target="#modalLogin" title="Cadastro"></a></li>
@@ -128,15 +145,7 @@
 
                                         @endif
                                     </ul>
-                                    @if (Auth::check())
-                                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                                            <p class="dropdown-item disabled" style="color: rgb(54, 54, 54)">
-                                                <strong>{{ Crypt::decrypt(Cookie::get('cookie_name')) }}</strong>
-                                            </p>
-                                            <a class="dropdown-item" href="/perfil">Ver perfil</a>
-                                            <a class="dropdown-item" href="/logout">Sair</a>
-                                        </div>
-                                    @endif
+
                                 </div>
 
 
@@ -219,19 +228,30 @@
                 </div>
             </div>
         </footer>
-    </div>
-        {{-- SCRIPT --}}
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="/js/core.min.js"></script>
-        <script src="/js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
-        </script>
+        <!--FORM VALIDATE-->
+    @if ($message = Session::get('success'))
+            <div class="col-md-3 offset-md-9 fixed-bottom p-3" style="bottom:5em;">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Cadastro realizado!</strong> <br>Seu cadastro foi concluido com sucesso!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
-        @include('paginas.login')
+                    </div>
+                </div>
+            @endif
+            @if ($message = Session::get('errors'))
+            <div class="col-md-3 offset-md-9 fixed-bottom p-3" style="bottom:5em;">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Opss...</strong> <br>Falha no login<u>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        @endif
+    </div>
+
+    <script src="/js/core.min.js"></script>
+    <script src="/js/script.js"></script>
+    @include('paginas.login')
+
 </body>
 
 </html>
