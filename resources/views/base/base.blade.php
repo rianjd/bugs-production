@@ -181,14 +181,14 @@
                             </p>
                         </div>
                         <div class="col-sm col-6 mb-3">
-                            <h3 style="color:white;">Telefone</h3>
+                            <h4 style="color:white;">Telefone</h4>
                             <ul class="list-unstyled links">
                                 <li><a href="#">(48) 9 9123-1975</a></li>
                                 <li><a href="#">(48) 9 9133-6884</a></li>
                             </ul>
                         </div>
                         <div class="col-sm col-6 mb-3">
-                            <h3 style="color:white;">Empresa</h3>
+                            <h4 style="color:white;">Empresa</h4>
                             <ul class="list-unstyled links">
                                 <li><a href="#sobre">Sobre nós</a></li>
                                 <li><a href="/acessorios">Itens</a></li>
@@ -196,14 +196,14 @@
                             </ul>
                         </div>
                         <div class="col-sm col-6 mb-5">
-                            <h3 style="color:white;">Endereço</h3>
+                            <h4 style="color:white;">Endereço</h4>
                             <ul class="list-unstyled links">
                                 <li><a href="https://goo.gl/maps/Eef8Qp2PQisuiF9p7">R. Vereador Adolfo Bunn, 7</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-6 mb-5">
-                            <h3 style="color:white;">Sociais</h3>
+                            <h4 style="color:white;">Sociais</h4>
                             <ul class="list-icons list-inline-sm">
                                 <li><a class="icon icon-sm fa fa-instagram icon-style-camera"
                                         href="https://instagram.com/bugssurf_oficial?igshid=YmMyMTA2M2Y="><span></span><span></span><span></span><span></span></a>
@@ -218,8 +218,8 @@
                     </div>
                     <div class="text-right col-lg-4 px-5">
                         <div>
-                            <h2 class="mb-0">Pronto para começar no surf?</h2>
-                            <h3 class="text-muted mb-2">Faça seu orçamento agora!</h3>
+                            <h3 >Pronto para começar no surf?</h3>
+                            <h4 class="text-muted my-2">Faça seu orçamento agora!</h4>
                         </div>
                         <div class="ml-auto">
                             <a href="/contato" class="btn btn-primary rounded-0 py-3 px-5">Contate-nos</a>
