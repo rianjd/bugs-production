@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <title> Bugs surf surfboards store</title>
+    <meta name = "description" content = "Bugs Surf é uma empresa de fabricação de pranchas de surf e acessórios. Faça seu orçamento ou compre online">
+
     <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="/image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css"
