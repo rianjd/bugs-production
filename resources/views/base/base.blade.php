@@ -3,7 +3,6 @@
 
 <head>
     <!-- Site Title-->
-    <title>Home</title>
     @yield('head')
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
