@@ -29,6 +29,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3404810199006574"
+    crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="RiuHNRMynUwY1u0znSmzs2K3-yiQ4V9Vsm3hEv4TktU" />
 </head>
 
